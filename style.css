@@ -1,16 +1,35 @@
 /*https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-different-height-and-width-the-same-via-css*/
 img {
     float: left;
-    width:  120px;
-    height: 100px;
     object-fit: cover;
+    /* margin: 1px; */
 }
 
 #game{
+    
     display:grid;
-    padding-left:30%;
-    padding-right:30%;
-    grid-gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-left:10%;
+    padding-right:10%;
+    margin:auto;
+    gap: 1px;
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: repeat(4, 180px);
+
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+
+/* #reset{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+#reset{
+    align-self: center;
+    width: 180px;
 }

@@ -1,6 +1,24 @@
 const answerKey = [[],[],[],[]] //hold the image paths that would be correct if the image was solved
 const objGrid = [[],[],[],[]] // holds the image objects for the puzzle
 let prevObjClicked = null;
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", resetGame)
+
+function resetGame(){
+    //get an array of 16 numbers in random order
+    const randomArr = randomize();
+
+    for (let r = 0; r < 4; r ++){
+        for (let c = 0; c < 4; c ++){
+            let imgObj = objGrid[r][c];
+            //make images clickable
+            imgObj.disabled = false;
+            //change the src images on the image object to randomize and reset the puzzles
+            imgObj.src = "/numbers/" + randomArr[((r *4 ) + c )] + ".PNG";
+        }
+    }
+    //randomize the order of the images on the page
+}
 
 
 function init(){ 
