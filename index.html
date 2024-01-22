@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="banner"><h1>Picture Puzzle</h1>
+    <div class="header">
+        <h1>Picture Puzzle</h1>
+    </div>
     <p id="instructions">To play the game, you must rearrange all the puzzle pieces such that you get a comprehensive image. To
         change the location of the cards, click the two images you would like to swap. They should swap places.
         You can't swap pieces that are in the correct place already. Once you set all of the pieces in the correct
         place, you have finished the game. Click the Reset button to reset the game. Good luck!
     </p>
-    <button id="reset">Reset</button>
+    <p id="won"></p>
+    <div id="center-reset">
+        <button id="reset" onclick="resetGame()">Reset</button>
     </div>
 
-    <div id="game">
+    <div class="game">
         <img class="puzzle" id="00">
         <img class="puzzle" id="01">
         <img class="puzzle" id="02">
@@ -35,8 +39,8 @@
         <img class="puzzle" id="31">
         <img class="puzzle" id="32">
         <img class="puzzle" id="33">
-
     </div>
-    <p id="won"></p>
+    
+
 </body>
 </html>

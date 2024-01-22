@@ -17,7 +17,6 @@ function resetGame(){
             imgObj.src = "/numbers/" + randomArr[((r *4 ) + c )] + ".PNG";
         }
     }
-    //randomize the order of the images on the page
 }
 
 
